@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	long long int t;
+	scanf("%lld",&t);
+	while(t--){
+		long long int s,temp,temp1;
+		scanf("%lld",&s);
+		if(s==1)
+		  printf("a\n");
+		else if(s==2)
+	      printf("ab\n");
+		else{
+			temp=s%3;
+			temp1=s/3;
+			while(temp1>0) {
+				printf("abc");
+				temp1--;
+			}
+			if(temp==0) 
+			    printf("\n");
+			else if(temp==1)
+				printf("a\n");
+			else if(temp==2)
+				printf("ab\n");
+		}
+	}
+	return 0;
+} 
