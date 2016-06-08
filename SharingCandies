@@ -1,0 +1,25 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+long long int gcd(long long int a,long long int b){
+ if(b==0)
+    return a;
+ return gcd(b,a%b);
+}
+int main(){
+ long long int t;
+ scanf("%lld",&t);
+ while(t--){
+  long long int a,b,c,d,temp,ans,a1,a2;
+  scanf("%lld %lld %lld %lld",&a,&b,&c,&d);
+  ans=gcd(c,d);
+  temp=abs(a-b);
+  a1=temp/ans;
+  a2=a1+1;
+  if(abs(a1*ans-temp)>abs(a2*ans-temp))
+     cout<<abs(ans*a2-temp)<<endl;
+   else
+     cout<<abs(ans*a1-temp)<<endl;
+ }
+return 0;
+} 
